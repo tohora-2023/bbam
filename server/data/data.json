@@ -1,30 +1,30 @@
 {
-  "papparazzi": [
+  "celeb-list": [
     {
       "id": 1,
       "name": "Katy Perry",
-      "strength": "I am stronk"
+      "skill": "I am stronk"
       
     },
     {
       "id": 2,
       "name": "Matt Leblanc",
-      "strength": "I am stronk"
+      "skill": "I am stronk"
     },
     {
       "id": 3,
       "name": "Addison Rae",
-      "strength": "I am stronk"
+      "skill": "I am stronk"
     },
     {
       "id": 4,
       "name": "Kangaroo Jack",
-      "strength": "I am stronk"
+      "skill": "I am stronk"
     },
     {
       "id": 5,
       "name": "Hasbulla Magomedov",
-      "strength": "I am stronk"
+      "skill": "I am stronk"
     }
   ]
 }

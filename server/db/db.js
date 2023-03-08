@@ -22,7 +22,7 @@ async function runSpaceship(db = connection) {
 
 function generateCelebEventPair(celebId, db = connection) {
   const randomNo = Math.floor(Math.random() * 4 + 1)
-  return db('outcomes').insert({ celebId, randomNo })
+  return db('outcomes').insert({ celeb_id: celebId, event_id: randomNo})
 }
 
 function resetOutcomes(db = connection) {

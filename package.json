@@ -12,7 +12,7 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier -w '**/*.{js,jsx,ts,tsx}'",
     "build": "knex migrate:latest",
-    "build-css": "npx tailwindcss -i ./server/public/input.css -o ./public/output.css --watch"
+    "build-css": "npx tailwindcss -c ./tailwindcss-config.js -i ./server/views/input.css -o ./server/views/output.css --watch"
   },
   "repository": {
     "type": "git",
