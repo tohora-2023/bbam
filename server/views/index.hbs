@@ -1,19 +1,27 @@
+<div class="bg-gray-300 border border-black">
+  <div class="flex-row justify-center items-center h-screen space-x-0.5">
+    <ul class="grid grid-cols-5 gap-4 max-h-12 ">
+      {{#each celebs}}
+      <li class="p-3 hover:shadow-s">
+        <img src="{{images}}" class="w-60 h-60 object-cover rounded-lg">
+        <div class="mt-2 text-center">{{name}}</div>
+        <div class="mt-4">
+          <p class="text-center text-sm">{{description}}</p>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
 
-<ul>
-  
-  {{#each celebs}}
-  <div class="p-6 bg-gray-100 hover:drop-shadow-2xl">
-  <li>Celeb name is {{name}}, this is them  <img src="{{images}}" class="mx-auto"></li>
+    <div class="flex flex-col justify-center items-center m-auto">
+      <h3 class="mb-2 text-center">Upcoming Events:</h3>
+      <div class="mt-4">
+        <ul class="text-center">
+          {{#each events}}
+          <li>{{name}}</li>  
+          {{/each}}
+        </ul>
+      </div>
+      <p class="mt-4 text-center">Check out our <a href="./outcome" class="underline">events and outcome page</a> for more details!</p>
+    </div>
   </div>
-  {{/each}}
-</ul>
-
-
-
-the events are:<ul>
-  {{#each events}}
-  <li> {{name}}, </li>
-  {{/each}}
-</ul>
-
-the following link will take you to <a href="./outcome"> the events and outcome page</a>
+</div>
