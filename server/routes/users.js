@@ -19,7 +19,17 @@ router.get('/', async (req, res) => {
 
 router.get('/outcome', async (req, res) => {
   const outcome = await db.runSpaceship()
-  res.render('outcome', { outcome: outcome})
+  // console.log(outcome)
+  res.render('outcome', { outcome: outcome })
 })
+
+
+// functoion for posting info to the server, future use
+// router.post('/outcome', async (req, res) => {
+//   await db.runSpaceship()
+//   // console.log(outcome)
+//   res.redirect('outcome')
+// })
+
 
 module.exports = router

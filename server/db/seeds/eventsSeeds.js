@@ -9,35 +9,35 @@ exports.seed = async function (knex) {
     {
       id: 1,
       name: 'Fire',
-      outcome: 'injured',
-      description: ' has been burned by a big fire on the ship! Ouch!',
+      outcome: 'injured.',
+      description: ' has been burned by a big fire on the ship',
     },
     {
       id: 2,
       name: 'Big Red Button',
-      outcome: 'dead',
+      outcome: 'killed!',
       description:
-        ' hit a mysterious big red button on a console, which evaporated them instantly!',
+        ' hit a mysterious big red button on a console, which evaporated them instantly',
     },
     {
       id: 3,
       name: 'Hiding',
-      outcome: 'injured',
+      outcome: 'injured.',
       description:
-        ' had to hide from the aliens, but they got bad cramps fro their tiny hiding spot.',
+        ' hidden from the aliens, but they got bad cramps from their tiny hiding spot',
     },
     {
       id: 4,
       name: 'Explosion',
-      outcome: 'dead',
-      description: ' was hit by a giant explosion out of nowhere! BBAM!!!!',
+      outcome: 'killed!',
+      description: ' been hit by a giant explosion out of nowhere! BBAM!!!!',
     },
     {
       id: 5,
       name: 'Escape',
-      outcome: 'escape',
+      outcome: 'out of the spaceship, hooray!',
       description:
-        ' managed to hop into the tractor beam and float down to Earth. Hooray!',
+        ' managed to hop into the tractor beam and float down to Earth',
     },
   ])
 }

@@ -15,13 +15,13 @@ async function runSpaceship(db = connection) {
     await generateCelebEventPair(i)
   }
   return db('outcomes')
-    .join('celebs', 'celebs.id', 'outcomes.celebs_id')
-    .join('events', 'events.id', 'outcomes.events_id')
+    .join('celebs', 'celebs.id', 'outcomes.celeb_id')
+    .join('events', 'events.id', 'outcomes.event_id')
     .select('celebs.name as celebName', 'events.description', 'events.outcome')
 }
 
 function generateCelebEventPair(celebId, db = connection) {
-  const randomNo = Math.floor(Math.random() * 4 + 1)
+  const randomNo = Math.floor(Math.random() * 5) +1
   return db('outcomes').insert({ celeb_id: celebId, event_id: randomNo})
 }
 

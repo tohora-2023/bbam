@@ -12,7 +12,8 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier -w '**/*.{js,jsx,ts,tsx}'",
     "build": "knex migrate:latest",
-    "build-css": "npx tailwindcss -c ./tailwindcss-config.js -i ./server/views/input.css -o ./server/views/output.css --watch"
+    "build-css": "npx tailwindcss -c ./tailwind.config.js -i ./server/views/input.css -o ./server/public/output.css --watch"
+
   },
   "repository": {
     "type": "git",
@@ -27,15 +28,17 @@
   "dependencies": {
     "express": "^4.17.2",
     "express-handlebars": "^6.0.2",
+    "install": "^0.13.0",
     "knex": "^2.3.0",
     "nodemon": "^2.0.15",
-    "sqlite3": "^5.1.2",
-    "tailwindcss": "^3.2.7"
+    "npm": "^9.6.1",
+    "sqlite3": "^5.1.2"
   },
   "devDependencies": {
     "@devacademy/eslint-config": "^1.8.0",
     "@testing-library/dom": "^8.17.1",
     "@testing-library/jest-dom": "^5.16.5",
+    "autoprefixer": "^10.4.14",
     "eslint": "^8.10.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jest": "^26.1.1",
@@ -43,8 +46,11 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.29.4",
     "jest": "^29.2.2",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
     "prettier": "2.6.1",
-    "supertest": "^6.2.2"
+    "supertest": "^6.2.2",
+    "tailwindcss": "^3.2.7"
   },
   "eslintConfig": {
     "extends": "@devacademy"
