@@ -42,7 +42,7 @@ exports.seed = async function (knex) {
     {
       id: 6,
       name: 'Vat',
-      outcome: 'an alien now!',
+      outcome: 'turned into alien now!',
       description: ' tripped and fell into a mysterious green vat',
     },
     {
@@ -55,7 +55,7 @@ exports.seed = async function (knex) {
     {
       id: 8,
       name: 'Attack enemy ship',
-      outcome: 'became the hero of the aliens!',
+      outcome: 'to become the hero of the aliens!',
       description:
         ' managed to accidentally fire a missile that stopped a millenia long alien war',
     },
