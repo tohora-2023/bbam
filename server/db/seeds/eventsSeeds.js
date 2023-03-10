@@ -39,5 +39,25 @@ exports.seed = async function (knex) {
       description:
         ' managed to hop into the tractor beam and float down to Earth',
     },
+    {
+      id: 6,
+      name: 'Vat',
+      outcome: 'an alien now!',
+      description: ' tripped and fell into a mysterious green vat',
+    },
+    {
+      id: 7,
+      name: 'Spaced',
+      outcome: 'killed!',
+      description:
+        ' made a wrong turn and fell through a hatch into outer space',
+    },
+    {
+      id: 8,
+      name: 'Attack enemy ship',
+      outcome: 'became the hero of the aliens!',
+      description:
+        ' managed to accidentally fire a missile that stopped a millenia long alien war',
+    },
   ])
 }

@@ -18,11 +18,18 @@ async function runSpaceship(db = connection) {
     .join('celebs', 'celebs.id', 'outcomes.celeb_id')
     .join('events', 'events.id', 'outcomes.event_id')
     .select('celebs.name as celebName', 'events.description', 'events.outcome')
+    .orderByRaw('random()')
 }
 
-function generateCelebEventPair(celebId, db = connection) {
-  const randomNo = Math.floor(Math.random() * 5) +1
-  return db('outcomes').insert({ celeb_id: celebId, event_id: randomNo})
+async function generateCelebEventPair(celebId, db = connection) {
+  const maxEvent = await getEventsLength()
+  const randomNo = Math.floor(Math.random() * maxEvent) + 1
+  return db('outcomes').insert({ celeb_id: celebId, event_id: randomNo })
+}
+
+async function getEventsLength(db = connection) {
+  const maxId = await db('events').max('id').first()
+  return maxId['max(`id`)']
 }
 
 function resetOutcomes(db = connection) {
