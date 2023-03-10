@@ -1,13 +1,25 @@
-<ul>
-  {{#each outcome}}
-  <li>{{celebName}} has {{description}}, and they got {{outcome}} </li>
-  {{/each}}
-</ul>
-
-
-<div>
-<a href="./outcome"><button id="new" type="button">generate new outcomes!</button><a href="./outcome">
-
+<div class="container mx-auto py-8">
+  <div class="grid grid-cols-2 gap-4">
+    {{#each outcome}}
+      <div class="bg-gray-100 border-2 border-gray-200 p-5 rounded-lg">
+        <div class="font-bold text-lg mb-2">{{celebName}}</div>
+        <div class="text-gray-500 text-sm">{{description}}</div>
+        <div class="text-gray-900">They got <span class="font-bold">{{outcome}}</span></div>
+      </div>
+    {{/each}}
+  </div>
 </div>
 
-<a href="/">back to main page</a>
+
+<div class="flex justify-center my-4">
+  <div class="mr-2">
+    <a href="./outcome">
+      <button id="new" type="button" class="py-2 px-4 bg-blue-500 text-white rounded hover:animate-bounce">New Outcome!</button>
+    </a>
+  </div>
+  <div class="ml-2">
+    <a href="/">
+      <button class="py-2 px-4 bg-blue-500 text-white rounded hover:animate-bounce">Go Back!</button>
+    </a>
+  </div>
+</div>
